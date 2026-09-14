@@ -1,0 +1,29 @@
+.mainContainer {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  position: relative;
+  overflow: hidden;
+}
+
+.dividerGlow {
+  width: 100%;
+  max-width: 1250px;
+  margin: 0 auto;
+  height: 1px;
+  background: linear-gradient(90deg, transparent 0%, rgba(0, 240, 255, 0.3) 50%, transparent 100%);
+  position: relative;
+}
+
+.dividerGlow::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 120px;
+  height: 2px;
+  background: var(--primary-color);
+  box-shadow: 0 0 12px var(--primary-color);
+  border-radius: var(--radius-full);
+}

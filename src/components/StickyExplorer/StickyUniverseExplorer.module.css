@@ -1,0 +1,138 @@
+.outerScrollSection {
+  position: relative;
+  width: 100%;
+  background: #fafaf9;
+  z-index: 10;
+  clear: both;
+}
+
+.pinnedViewport {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  height: 100dvh;
+  min-height: 520px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4.75rem 1.5rem 1.5rem 1.5rem;
+  box-sizing: border-box;
+  background: #fafaf9;
+}
+
+.storyCardContainer {
+  position: relative;
+  width: 100%;
+  max-width: 1200px;
+  height: calc(100vh - 120px);
+  height: calc(100dvh - 110px);
+  max-height: 720px;
+  min-height: 440px;
+  background: #ffffff;
+  border-radius: 2.5rem;
+  border: 2px solid #f1f5f9;
+  box-shadow: 0 25px 60px -15px rgba(15, 23, 42, 0.1), 0 8px 16px -4px rgba(15, 23, 42, 0.04);
+  padding: 2rem 2.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow: hidden;
+}
+
+.storyHeader {
+  text-align: center;
+  margin-bottom: 0.75rem;
+}
+
+.headerTitle {
+  font-family: var(--font-heading);
+  font-size: clamp(1.2rem, 2.5vw, 2rem);
+  font-weight: 900;
+  color: #0f172a;
+  line-height: 1.15;
+  margin-bottom: 0.2rem;
+}
+
+.headerSubtitle {
+  font-size: 0.85rem;
+  color: #64748b;
+  font-weight: 500;
+}
+
+.funFactBox {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  padding: 0.4rem 0.85rem;
+  border-radius: 0.85rem;
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: #1e293b;
+}
+
+.progressBarWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding-top: 0.75rem;
+  border-top: 1px solid #f1f5f9;
+}
+
+.progressDot {
+  width: 12px;
+  height: 12px;
+  border-radius: 9999px;
+  background: #e2e8f0;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.progressDotActive {
+  width: 36px;
+  background: linear-gradient(135deg, #f59e0b, #ff5722);
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  .pinnedViewport {
+    padding: 4.25rem 0.85rem 0.85rem 0.85rem;
+    height: 100dvh;
+  }
+  .storyCardContainer {
+    padding: 1.25rem 1.15rem 1rem 1.15rem;
+    border-radius: 2rem;
+    height: auto;
+    min-height: 480px;
+    max-height: calc(100dvh - 80px);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .headerSubtitle {
+    display: block;
+    font-size: 0.75rem;
+    color: #64748b;
+    margin-top: 0.2rem;
+    margin-bottom: 0.25rem;
+  }
+  .headerTitle {
+    font-size: 1.25rem;
+    line-height: 1.2;
+    margin-bottom: 0.15rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .pinnedViewport {
+    padding: 4rem 0.65rem 0.65rem 0.65rem;
+  }
+  .storyCardContainer {
+    padding: 1.25rem 1rem 0.85rem 1rem;
+    border-radius: 1.75rem;
+    min-height: 460px;
+  }
+}

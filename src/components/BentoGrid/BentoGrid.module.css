@@ -1,0 +1,622 @@
+.bentoSection {
+  position: relative;
+  width: 100%;
+  padding: 6rem 1.5rem;
+  z-index: 10;
+}
+
+.container {
+  max-width: 1250px;
+  margin: 0 auto;
+}
+
+.sectionHeader {
+  text-align: center;
+  margin-bottom: 3.5rem;
+}
+
+.sectionTitle {
+  font-family: var(--font-heading);
+  font-size: clamp(1.8rem, 3.2vw, 2.8rem);
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  margin-top: 0.75rem;
+  margin-bottom: 0.75rem;
+  text-transform: uppercase;
+}
+
+.sectionSubtitle {
+  font-size: 1.05rem;
+  color: var(--text-secondary);
+  max-width: 650px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+/* Bento Grid System */
+.bentoGrid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 1.5rem;
+}
+
+/* Card 1: Major Feature (7 cols, 2 rows) */
+.bentoItemMajor {
+  grid-column: span 7;
+  grid-row: span 2;
+  background: rgba(12, 20, 36, 0.75);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(0, 240, 255, 0.18);
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  box-shadow: 0 12px 36px rgba(0, 0, 0, 0.5);
+  transition: var(--transition-smooth);
+}
+
+.bentoItemMajor:hover {
+  border-color: rgba(0, 240, 255, 0.4);
+  transform: translateY(-4px);
+  box-shadow: 0 16px 45px rgba(0, 240, 255, 0.15);
+}
+
+.majorCardContent {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.majorImageWrap {
+  position: relative;
+  width: 100%;
+  height: 280px;
+  overflow: hidden;
+}
+
+.bentoCoverImage {
+  object-fit: cover;
+  transition: transform 0.6s ease;
+}
+
+.bentoItemMajor:hover .bentoCoverImage,
+.bentoItemHero:hover .bentoCoverImage,
+.bentoItemAi:hover .bentoCoverImage,
+.bentoItemVehicle:hover .bentoCoverImage,
+.bentoItemVillain:hover .bentoCoverImage {
+  transform: scale(1.04);
+}
+
+.imageDarkGradient {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(12, 20, 36, 0.98) 0%, rgba(12, 20, 36, 0.4) 60%, transparent 100%);
+}
+
+.floatingTechPill {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.4rem 0.85rem;
+  background: rgba(6, 10, 20, 0.85);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(0, 240, 255, 0.3);
+  border-radius: var(--radius-full);
+  font-family: var(--font-tech);
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: #fff;
+  letter-spacing: 0.08em;
+}
+
+.majorDetails {
+  padding: 1.5rem 1.75rem 1.75rem 1.75rem;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.techTabs {
+  display: flex;
+  gap: 0.6rem;
+  margin-bottom: 1.25rem;
+  flex-wrap: wrap;
+}
+
+.tabBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.45rem 0.95rem;
+  border-radius: var(--radius-full);
+  background: rgba(255, 255, 255, 0.05);
+  color: var(--text-secondary);
+  font-size: 0.82rem;
+  font-weight: 600;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  transition: var(--transition-fast);
+}
+
+.tabBtnActive {
+  background: rgba(0, 240, 255, 0.15);
+  color: var(--primary-color);
+  border-color: var(--primary-color);
+  box-shadow: 0 0 14px rgba(0, 240, 255, 0.25);
+}
+
+.techInfoBlock {
+  display: flex;
+  flex-direction: column;
+}
+
+.techTitleRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.techName {
+  font-family: var(--font-heading);
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+.powerBadge {
+  font-family: var(--font-tech);
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: var(--accent-emerald);
+  background: rgba(0, 255, 157, 0.08);
+  border: 1px solid rgba(0, 255, 157, 0.25);
+  padding: 0.25rem 0.6rem;
+  border-radius: var(--radius-sm);
+}
+
+.techCategory {
+  font-size: 0.82rem;
+  color: var(--secondary-color);
+  font-weight: 600;
+  margin-top: 0.2rem;
+  margin-bottom: 0.75rem;
+}
+
+.techDescription {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  line-height: 1.55;
+  margin-bottom: 1.25rem;
+}
+
+.featuresList {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.featureItem {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-size: 0.85rem;
+  color: var(--text-primary);
+}
+
+.featureBullet {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--primary-color);
+  box-shadow: 0 0 8px var(--primary-color);
+}
+
+/* Card 2: Zap Zap Hero Dossier (5 cols, 2 rows) */
+.bentoItemHero {
+  grid-column: span 5;
+  grid-row: span 2;
+  background: rgba(12, 20, 36, 0.75);
+  backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 183, 3, 0.2);
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  box-shadow: 0 12px 36px rgba(0, 0, 0, 0.5);
+  transition: var(--transition-smooth);
+}
+
+.bentoItemHero:hover {
+  border-color: rgba(255, 183, 3, 0.45);
+  transform: translateY(-4px);
+  box-shadow: 0 16px 45px rgba(255, 183, 3, 0.15);
+}
+
+.heroCardContent {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.heroImageWrap {
+  position: relative;
+  width: 100%;
+  height: 280px;
+  overflow: hidden;
+}
+
+.heroOverlayGradient {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(12, 20, 36, 0.98) 0%, rgba(12, 20, 36, 0.4) 60%, transparent 100%);
+}
+
+.heroTextContent {
+  padding: 1.5rem 1.75rem;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.heroCardTitle {
+  font-family: var(--font-heading);
+  font-size: 1.6rem;
+  font-weight: 800;
+  color: #fff;
+  margin-top: 0.6rem;
+  margin-bottom: 0.2rem;
+}
+
+.heroCardTagline {
+  font-size: 0.85rem;
+  color: var(--secondary-color);
+  font-weight: 600;
+  margin-bottom: 0.85rem;
+}
+
+.heroCardBio {
+  font-size: 0.88rem;
+  color: var(--text-secondary);
+  line-height: 1.55;
+  margin-bottom: 1.25rem;
+}
+
+.heroTraits {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: auto;
+}
+
+.traitChip {
+  font-size: 0.75rem;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  padding: 0.3rem 0.65rem;
+  border-radius: var(--radius-sm);
+  color: var(--text-primary);
+  font-weight: 500;
+}
+
+/* Card 3: AI Assistant (4 cols) */
+.bentoItemAi {
+  grid-column: span 4;
+  height: 290px;
+  background: rgba(12, 20, 36, 0.75);
+  backdrop-filter: blur(16px);
+  border: 1px solid rgba(0, 240, 255, 0.15);
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  transition: var(--transition-smooth);
+}
+
+.bentoItemAi:hover {
+  border-color: rgba(0, 240, 255, 0.4);
+  transform: translateY(-4px);
+  box-shadow: 0 12px 30px rgba(0, 240, 255, 0.15);
+}
+
+.aiCardContent,
+.vehicleCardContent {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.aiImageWrap,
+.vehicleImageWrap {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.imageVignetteSubtle {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(8, 14, 26, 0.95) 0%, rgba(8, 14, 26, 0.7) 45%, transparent 100%);
+}
+
+.cardOverlayText {
+  position: relative;
+  z-index: 5;
+  padding: 1.5rem;
+}
+
+.cardHeaderSmall {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.4rem;
+}
+
+.smallCardCategory {
+  font-family: var(--font-tech);
+  font-size: 0.68rem;
+  font-weight: 700;
+  color: var(--primary-color);
+  letter-spacing: 0.08em;
+}
+
+.cardTitle {
+  font-family: var(--font-heading);
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 0.35rem;
+}
+
+.cardDesc {
+  font-size: 0.82rem;
+  color: var(--text-secondary);
+  line-height: 1.45;
+}
+
+/* Card 4: Vehicle (4 cols) */
+.bentoItemVehicle {
+  grid-column: span 4;
+  height: 290px;
+  background: rgba(12, 20, 36, 0.75);
+  backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 183, 3, 0.15);
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  transition: var(--transition-smooth);
+}
+
+.bentoItemVehicle:hover {
+  border-color: rgba(255, 183, 3, 0.4);
+  transform: translateY(-4px);
+  box-shadow: 0 12px 30px rgba(255, 183, 3, 0.15);
+}
+
+/* Card 5: Supervillains & Foes (4 cols) */
+.bentoItemVillain {
+  grid-column: span 4;
+  height: 290px;
+  background: rgba(12, 20, 36, 0.75);
+  backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 51, 102, 0.2);
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  transition: var(--transition-smooth);
+}
+
+.bentoItemVillain:hover {
+  border-color: rgba(255, 51, 102, 0.5);
+  transform: translateY(-4px);
+  box-shadow: 0 12px 30px rgba(255, 51, 102, 0.2);
+}
+
+.villainCardContent {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.villainImageWrap {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.villainGradient {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(14, 10, 24, 0.96) 0%, rgba(14, 10, 24, 0.65) 50%, transparent 100%);
+}
+
+.villainTextContent {
+  position: relative;
+  z-index: 5;
+  padding: 1.25rem 1.5rem;
+}
+
+.threatBadge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-family: var(--font-tech);
+  font-size: 0.68rem;
+  font-weight: 700;
+  color: #ff3366;
+  letter-spacing: 0.08em;
+  margin-bottom: 0.35rem;
+}
+
+.villainTitle {
+  font-family: var(--font-heading);
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 0.3rem;
+}
+
+.villainDesc {
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+  line-height: 1.4;
+  margin-bottom: 0.65rem;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.villainList {
+  display: flex;
+  gap: 0.5rem;
+  font-size: 0.72rem;
+  color: #ff99aa;
+  font-family: var(--font-tech);
+}
+
+/* Card 6: Bengali Sci-Fi Animation DNA (12 cols) */
+.bentoItemBengali {
+  grid-column: span 12;
+  background: linear-gradient(135deg, rgba(14, 24, 48, 0.85) 0%, rgba(8, 14, 26, 0.95) 100%);
+  backdrop-filter: blur(16px);
+  border: 1px solid rgba(0, 240, 255, 0.2);
+  border-radius: var(--radius-xl);
+  padding: 2rem 2.5rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  transition: var(--transition-smooth);
+}
+
+.bentoItemBengali:hover {
+  border-color: rgba(0, 240, 255, 0.45);
+  box-shadow: 0 14px 40px rgba(0, 240, 255, 0.15);
+}
+
+.dnaCardInner {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.dnaIconBox {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 60px;
+  height: 60px;
+  border-radius: var(--radius-md);
+  background: rgba(0, 240, 255, 0.1);
+  border: 1px solid rgba(0, 240, 255, 0.3);
+  flex-shrink: 0;
+}
+
+.dnaContent {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.dnaSubtitle {
+  font-family: var(--font-tech);
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: var(--secondary-color);
+  letter-spacing: 0.1em;
+}
+
+.dnaTitle {
+  font-family: var(--font-heading);
+  font-size: 1.35rem;
+  font-weight: 800;
+  color: #fff;
+  margin-top: 0.2rem;
+  margin-bottom: 0.35rem;
+}
+
+.dnaDescription {
+  font-size: 0.92rem;
+  color: var(--text-secondary);
+  line-height: 1.5;
+  max-width: 800px;
+  margin-bottom: 0.85rem;
+}
+
+.dnaLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  color: var(--primary-color);
+  font-weight: 600;
+  font-size: 0.9rem;
+  transition: var(--transition-fast);
+}
+
+.dnaLink:hover {
+  gap: 0.65rem;
+  text-shadow: 0 0 10px rgba(0, 240, 255, 0.5);
+}
+
+@media (max-width: 1024px) {
+  .bentoItemMajor {
+    grid-column: span 12;
+    grid-row: span 1;
+  }
+  .bentoItemHero {
+    grid-column: span 12;
+    grid-row: span 1;
+  }
+  .bentoItemAi,
+  .bentoItemVehicle,
+  .bentoItemVillain {
+    grid-column: span 6;
+  }
+  .bentoItemVillain {
+    grid-column: span 12;
+  }
+}
+
+@media (max-width: 768px) {
+  .bentoItemAi,
+  .bentoItemVehicle,
+  .bentoItemVillain {
+    grid-column: span 12;
+  }
+  .dnaCardInner {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .bentoSection {
+    padding: 4rem 1rem;
+  }
+  .majorImageWrap,
+  .heroImageWrap {
+    height: 220px;
+  }
+  .majorDetails,
+  .heroTextContent {
+    padding: 1.25rem 1rem;
+  }
+  .bentoItemBengali {
+    padding: 1.5rem 1.25rem;
+  }
+  .techName {
+    font-size: 1.15rem;
+  }
+  .heroCardTitle {
+    font-size: 1.35rem;
+  }
+  .techTabs {
+    gap: 0.4rem;
+  }
+  .tabBtn {
+    padding: 0.35rem 0.75rem;
+    font-size: 0.75rem;
+  }
+}
