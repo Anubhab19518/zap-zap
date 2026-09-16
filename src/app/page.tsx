@@ -6,6 +6,7 @@ import InventionLab from "@/components/InventionLab/InventionLab";
 import EpisodeTerminal from "@/components/EpisodeTerminal/EpisodeTerminal";
 import UniverseWorld from "@/components/UniverseWorld/UniverseWorld";
 import UniverseRoadmap from "@/components/Roadmap/UniverseRoadmap";
+import BlogSection from "@/components/Blog/BlogSection";
 import FaqAccordion from "@/components/Faq/FaqAccordion";
 import Footer from "@/components/Footer/Footer";
 
@@ -106,10 +107,13 @@ export default async function Home() {
       {/* 8. Expanding Franchise Roadmap */}
       <UniverseRoadmap />
 
-      {/* 9. Family Questions & Answers */}
+      {/* 9. Laboratory Chronicles & Blogs */}
+      <BlogSection />
+
+      {/* 10. Family Questions & Answers */}
       <FaqAccordion />
 
-      {/* 10. Illustrated Character-Driven Warm Franchise Footer */}
+      {/* 11. Illustrated Character-Driven Warm Franchise Footer */}
       <Footer />
     </main>
   );

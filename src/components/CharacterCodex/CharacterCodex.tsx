@@ -247,20 +247,8 @@ export default function CharacterCodex() {
               {/* Character Details Column */}
               <div className="md:col-span-7 p-5 sm:p-8 md:p-10 flex flex-col justify-between bg-gradient-to-b from-white via-white to-slate-50">
                 <div>
-                  {/* Hashtags */}
-                  <div className="flex flex-wrap items-center gap-1.5 mb-3">
-                    {current.tags.map((tag, tIdx) => (
-                      <span
-                        key={tIdx}
-                        className="px-2.5 py-1 rounded-full bg-slate-100 text-slate-700 text-xs font-bold border border-slate-200"
-                      >
-                        {tag}
-                      </span>
-                    ))}
-                  </div>
-
                   {/* Character Name */}
-                  <h3 className="font-heading text-2xl sm:text-3xl md:text-4xl font-black text-slate-900 mb-2 leading-tight tracking-tight">
+                  <h3 className="font-heading text-2xl sm:text-3xl md:text-4xl font-black text-slate-900 mb-3 leading-tight tracking-tight">
                     {current.name}
                   </h3>
 

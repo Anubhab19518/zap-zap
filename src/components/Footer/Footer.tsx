@@ -273,12 +273,13 @@ export default function Footer() {
         <div className="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-500 font-medium">
           <p>© {new Date().getFullYear()} Zap Zap Professor. All rights reserved. Original Bengali Animated Series.</p>
           <div className="flex items-center gap-6">
-            <Link href="#characters" className="hover:text-amber-600 transition-colors font-bold">Characters</Link>
-            <Link href="#story" className="hover:text-amber-600 transition-colors font-bold">Story</Link>
-            <Link href="#inventions" className="hover:text-cyan-600 transition-colors font-bold">Inventions</Link>
-            <Link href="#episodes" className="hover:text-orange-600 transition-colors font-bold">Watch</Link>
-            <Link href="#universe" className="hover:text-blue-600 transition-colors font-bold">Universe</Link>
-            <Link href="#faq" className="hover:text-slate-900 transition-colors font-bold">FAQ</Link>
+            <Link href="/#characters" className="hover:text-amber-600 transition-colors font-bold">Characters</Link>
+            <Link href="/#story" className="hover:text-amber-600 transition-colors font-bold">Story</Link>
+            <Link href="/#inventions" className="hover:text-cyan-600 transition-colors font-bold">Inventions</Link>
+            <Link href="/#episodes" className="hover:text-orange-600 transition-colors font-bold">Watch</Link>
+            <Link href="/#universe" className="hover:text-blue-600 transition-colors font-bold">Universe</Link>
+            <Link href="/blog" className="hover:text-amber-600 transition-colors font-bold">Blogs</Link>
+            <Link href="/#faq" className="hover:text-slate-900 transition-colors font-bold">FAQ</Link>
           </div>
         </div>
       </div>

@@ -3,7 +3,7 @@
 import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { Menu, X, Play, Rocket, User, Compass, Zap, Tv, Globe } from "lucide-react";
+import { Menu, X, Play, Rocket, User, Compass, Zap, Tv, Globe, BookOpen } from "lucide-react";
 import { YoutubeIcon, InstagramIcon, FacebookIcon } from "../Icons/SocialIcons";
 import styles from "./Header.module.css";
 
@@ -21,11 +21,12 @@ export default function Header() {
 
   const navLinks = [
     { name: "HOME", href: "/", icon: Rocket },
-    { name: "CHARACTERS", href: "#characters", icon: User },
-    { name: "STORY", href: "#story", icon: Compass },
-    { name: "INVENTIONS", href: "#inventions", icon: Zap },
-    { name: "EPISODES", href: "#episodes", icon: Tv },
-    { name: "UNIVERSE", href: "#universe", icon: Globe },
+    { name: "CHARACTERS", href: "/#characters", icon: User },
+    { name: "STORY", href: "/#story", icon: Compass },
+    { name: "INVENTIONS", href: "/#inventions", icon: Zap },
+    { name: "EPISODES", href: "/#episodes", icon: Tv },
+    { name: "UNIVERSE", href: "/#universe", icon: Globe },
+    { name: "BLOGS", href: "/blog", icon: BookOpen },
   ];
 
   return (
