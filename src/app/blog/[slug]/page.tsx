@@ -13,7 +13,6 @@ import {
   ChevronRight,
   ArrowLeft,
   ArrowRight,
-  Sparkles,
   Lightbulb,
   FileText,
   Quote,

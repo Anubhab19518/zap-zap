@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { Share2, Check, Link2 } from "lucide-react";
 import { FacebookIcon, WhatsappIcon, XIcon } from "@/components/Icons/SocialIcons";
 
@@ -11,16 +11,16 @@ interface ShareButtonsProps {
 
 export default function ShareButtons({ title, slug }: ShareButtonsProps) {
   const [copied, setCopied] = useState(false);
-  const [shareUrl, setShareUrl] = useState("");
 
-  useEffect(() => {
+  const getShareUrl = () => {
     if (typeof window !== "undefined") {
-      setShareUrl(`${window.location.origin}/blog/${slug}`);
+      return `${window.location.origin}/blog/${slug}`;
     }
-  }, [slug]);
+    return `https://zapzapprofessor.com/blog/${slug}`;
+  };
 
   const handleCopyLink = async () => {
-    const url = shareUrl || (typeof window !== "undefined" ? `${window.location.origin}/blog/${slug}` : "");
+    const url = getShareUrl();
     if (!url) return;
 
     try {
@@ -33,7 +33,7 @@ export default function ShareButtons({ title, slug }: ShareButtonsProps) {
   };
 
   const handleShare = (platform: "twitter" | "whatsapp" | "facebook") => {
-    const url = shareUrl || (typeof window !== "undefined" ? `${window.location.origin}/blog/${slug}` : "");
+    const url = getShareUrl();
     const encodedTitle = encodeURIComponent(title);
     const encodedUrl = encodeURIComponent(url);
 

@@ -4,7 +4,7 @@ import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
-import { Calendar, Clock, ArrowRight, BookOpen, Sparkles } from "lucide-react";
+import { Calendar, Clock, ArrowRight, BookOpen } from "lucide-react";
 import { BLOG_POSTS } from "@/data/blogs";
 
 export default function BlogSection() {
