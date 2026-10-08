@@ -85,16 +85,17 @@ export default function CharacterCard({ character }: CharacterCardProps) {
         </div>
       </div>
 
-      {/* Large Character Portrait Poster */}
-      <div className="relative w-full aspect-[4/3] rounded-2xl overflow-hidden bg-slate-100 mb-5 shadow-inner">
-        <Image
-          src={character.imageSrc}
-          alt={character.name}
-          fill
-          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-          className="object-cover object-center group-hover:scale-108 transition-transform duration-500"
-        />
-        <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+      {/* Character Portrait Frame with Transparent Support */}
+      <div className="relative w-full aspect-[4/3] rounded-2xl overflow-hidden bg-gradient-to-b from-slate-50 to-slate-100/80 p-3 mb-5 shadow-inner flex items-center justify-center">
+        <div className="relative w-full h-full">
+          <Image
+            src={character.imageSrc}
+            alt={character.name}
+            fill
+            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+            className="object-contain object-bottom drop-shadow-md group-hover:scale-108 transition-transform duration-500"
+          />
+        </div>
       </div>
 
       {/* Character Details */}

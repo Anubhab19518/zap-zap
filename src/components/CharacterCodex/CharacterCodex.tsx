@@ -9,9 +9,11 @@ export interface FranchiseCharacter {
   id: string;
   tabName: string;
   name: string;
+  role: string;
   tags: string[];
   quote: string;
   imageSrc: string;
+  zoomScale?: string;
   videoSrc?: string;
   theme: {
     heroBg: string;
@@ -24,12 +26,14 @@ export interface FranchiseCharacter {
 
 const CHARACTERS: FranchiseCharacter[] = [
   {
-    id: "zap-zap",
-    tabName: "Zap-Zap Professor",
-    name: "Zap-Zap Professor",
-    tags: ["#GeniusScientist", "#ScienceSuperpower", "#CatLover", "#ProtectorOfBengal"],
-    quote: "Think. Experiment. Discover. Innovate! What fun science mysteries are waiting for us today?",
-    imageSrc: "/images/zap_hero_lab.jpg",
+    id: "bhichitro",
+    tabName: "Prof. Bhichitro",
+    name: "Professor Bhichitro",
+    role: "Chief Scientist & Master Inventor",
+    tags: ["#GeniusScientist", "#MasterInventor", "#ScienceSuperpower", "#ProtectorOfBengal"],
+    quote: "Think. Experiment. Discover. Innovate! Science is the greatest superpower we have to protect Bengal and shape the future.",
+    imageSrc: "/photos/bichitro.png",
+    zoomScale: "scale-115 sm:scale-200",
     theme: {
       heroBg: "bg-gradient-to-br from-amber-400 via-orange-500 to-amber-600",
       border: "border-amber-300/80",
@@ -39,29 +43,16 @@ const CHARACTERS: FranchiseCharacter[] = [
     },
   },
   {
-    id: "aura-7",
-    tabName: "AURA-7 AI",
-    name: "AURA-7 AI",
-    tags: ["#QuantumAI", "#BestFriend", "#Defender", "#SuperSmart"],
-    quote: "Quantum simulation complete: We have a 99.8% chance of extraordinary fun and discovery!",
-    imageSrc: "/images/quantum_ai_robot.jpg",
+    id: "miki",
+    tabName: "Miki",
+    name: "Miki",
+    role: "Intelligent Cat & Lab Detective",
+    tags: ["#SmartCat", "#LoyalCompanion", "#LabDetective", "#FelineGenius"],
+    quote: "Meow! Always the quickest to spot hidden clues, alert the crew, and protect the lab before anyone else notices.",
+    imageSrc: "/photos/cat.png",
+    zoomScale: "scale-120 sm:scale-105",
     theme: {
-      heroBg: "bg-gradient-to-br from-cyan-400 via-teal-500 to-cyan-700",
-      border: "border-cyan-300/80",
-      btnBg: "bg-cyan-500 hover:bg-cyan-600 text-slate-950",
-      glow: "shadow-cyan-500/20",
-      quoteBg: "bg-cyan-50/90 border-cyan-200 text-cyan-950",
-    },
-  },
-  {
-    id: "lab-team",
-    tabName: "Bengal Quantum Allies",
-    name: "Bengal Quantum Allies",
-    tags: ["#KolkataHQ", "#Teamwork", "#YoungInventors", "#STEM"],
-    quote: "Together with Zap-Zap, we explore the deepest mysteries of physics and space-time rifts!",
-    imageSrc: "/images/lab_team_allies.jpg",
-    theme: {
-      heroBg: "bg-gradient-to-br from-emerald-400 via-green-600 to-teal-700",
+      heroBg: "bg-gradient-to-br from-emerald-400 via-teal-500 to-emerald-700",
       border: "border-emerald-300/80",
       btnBg: "bg-emerald-500 hover:bg-emerald-600 text-white",
       glow: "shadow-emerald-500/20",
@@ -69,33 +60,37 @@ const CHARACTERS: FranchiseCharacter[] = [
     },
   },
   {
-    id: "aurora-x",
-    tabName: "Aurora-X Sky Pilot",
-    name: "Aurora-X Sky Pilot",
-    tags: ["#Mach3.5", "#AntiGravity", "#SkyCruiser", "#HighSpeed"],
-    quote: "Engaging Mach 3.5 ion rings — soaring across the skies of Bengal in supersonic speed!",
-    imageSrc: "/images/futuristic_sci_fi_vehicle.jpg",
+    id: "abhisek",
+    tabName: "Abhisek",
+    name: "Abhisek",
+    role: "Daring Young Inventor & Explorer",
+    tags: ["#YoungInventor", "#DaringExplorer", "#STEMHero", "#TechEnthusiast"],
+    quote: "Ready for action! There's no scientific mystery too challenging or mission too tough when we work together.",
+    imageSrc: "/photos/abhisekh.png",
+    zoomScale: "scale-150 sm:scale-140",
     theme: {
-      heroBg: "bg-gradient-to-br from-orange-400 via-red-500 to-amber-600",
-      border: "border-orange-300/80",
-      btnBg: "bg-orange-500 hover:bg-orange-600 text-white",
-      glow: "shadow-orange-500/20",
-      quoteBg: "bg-orange-50/90 border-orange-200 text-orange-950",
+      heroBg: "bg-gradient-to-br from-sky-400 via-blue-600 to-indigo-700",
+      border: "border-sky-300/80",
+      btnBg: "bg-blue-600 hover:bg-blue-700 text-white",
+      glow: "shadow-blue-500/20",
+      quoteBg: "bg-sky-50/90 border-sky-200 text-sky-950",
     },
   },
   {
-    id: "dr-cyberos",
-    tabName: "Dr. Cyberos",
-    name: "Dr. Cyberos",
-    tags: ["#RogueInventor", "#RogueRobots", "#DramaKing", "#SciFiRival"],
-    quote: "My rogue machines will bend the rules of physics! Prepare for my greatest mechanical scheme!",
-    imageSrc: "/images/dr_cyberos_villain.jpg",
+    id: "mallika",
+    tabName: "Mallika",
+    name: "Mallika",
+    role: "Brilliant Tech Strategist & Innovator",
+    tags: ["#BrilliantMind", "#QuantumStrategist", "#CreativeGenius", "#FearlessExplorer"],
+    quote: "Every complex problem has an elegant solution — all it takes is curiosity, keen observation, and precise science!",
+    imageSrc: "/photos/mallika.png",
+    zoomScale: "scale-115 sm:scale-100",
     theme: {
-      heroBg: "bg-gradient-to-br from-purple-500 via-fuchsia-600 to-indigo-800",
-      border: "border-purple-300/80",
-      btnBg: "bg-purple-600 hover:bg-purple-700 text-white",
-      glow: "shadow-purple-500/20",
-      quoteBg: "bg-purple-50/90 border-purple-200 text-purple-950",
+      heroBg: "bg-gradient-to-br from-fuchsia-400 via-pink-500 to-rose-600",
+      border: "border-pink-300/80",
+      btnBg: "bg-fuchsia-600 hover:bg-fuchsia-700 text-white",
+      glow: "shadow-pink-500/20",
+      quoteBg: "bg-pink-50/90 border-pink-200 text-pink-950",
     },
   },
 ];
@@ -146,7 +141,7 @@ export default function CharacterCodex() {
               key={char.id}
               ref={isActive ? activeTabRef : null}
               onClick={() => setCurrentIndex(index)}
-              className={`whitespace-nowrap px-4 py-2 rounded-full font-heading text-xs sm:text-sm font-black transition-all cursor-pointer flex-shrink-0 border flex items-center gap-1.5 ${
+              className={`whitespace-nowrap px-5 py-2.5 rounded-full font-heading text-xs sm:text-sm font-black transition-all cursor-pointer flex-shrink-0 border flex items-center gap-1.5 ${
                 isActive
                   ? `${char.theme.heroBg} text-white shadow-md scale-105 border-transparent`
                   : "bg-white text-slate-600 hover:bg-slate-100 border-slate-200 shadow-sm"
@@ -220,27 +215,29 @@ export default function CharacterCodex() {
                   </button>
                 </div>
 
-                {/* Character Portrait Frame */}
-                <div className="relative w-44 h-44 sm:w-56 sm:h-56 md:w-64 md:h-64 rounded-2xl sm:rounded-3xl overflow-hidden shadow-2xl border-4 border-white/80 bg-white/20">
-                  {current.videoSrc ? (
-                    <video
-                      src={current.videoSrc}
-                      autoPlay
-                      loop
-                      muted
-                      playsInline
-                      className="w-full h-full object-cover object-center"
-                    />
-                  ) : (
-                    <Image
-                      src={current.imageSrc}
-                      alt={current.name}
-                      fill
-                      priority
-                      sizes="(max-width: 768px) 240px, 300px"
-                      className="object-cover object-center"
-                    />
-                  )}
+                {/* Character Portrait Frame - Zoomed In & Centered */}
+                <div className="relative w-52 h-52 sm:w-60 sm:h-60 md:w-68 md:h-68 rounded-2xl sm:rounded-3xl overflow-hidden shadow-2xl border-4 border-white/80 bg-white/25 backdrop-blur-xs flex items-center justify-center p-2">
+                  <div className="relative w-full h-full flex items-center justify-center overflow-hidden">
+                    {current.videoSrc ? (
+                      <video
+                        src={current.videoSrc}
+                        autoPlay
+                        loop
+                        muted
+                        playsInline
+                        className="w-full h-full object-cover object-center"
+                      />
+                    ) : (
+                      <Image
+                        src={current.imageSrc}
+                        alt={current.name}
+                        fill
+                        priority
+                        sizes="(max-width: 768px) 260px, 320px"
+                        className={`object-contain object-center ${current.zoomScale || "scale-100"} drop-shadow-[0_12px_20px_rgba(0,0,0,0.25)]`}
+                      />
+                    )}
+                  </div>
                 </div>
               </div>
 
@@ -291,6 +288,3 @@ export default function CharacterCodex() {
     </section>
   );
 }
-
-
-

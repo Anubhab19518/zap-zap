@@ -39,7 +39,7 @@ export default function Footer() {
       }
 
       setIsSubmitted(true);
-      setSuccessInfo(data.message || "Zap-Zap and AURA-7 will review your transmission and get back to you shortly.");
+      setSuccessInfo(data.message || "Professor Bhichitro and the team will review your transmission and get back to you shortly.");
       setFormState({ name: "", email: "", subject: "", message: "" });
     } catch (err: unknown) {
       console.error("Form submission error:", err);
@@ -63,13 +63,13 @@ export default function Footer() {
             <div>
               {/* Brand & Character Avatar */}
               <div className="flex items-center gap-3.5 mb-6">
-                <div className="w-14 h-14 rounded-full bg-amber-400 p-0.5 shadow-md overflow-hidden border-2 border-amber-300">
+                <div className="w-14 h-14 rounded-full bg-amber-400 p-0.5 shadow-md overflow-hidden border-2 border-amber-300 flex items-center justify-center">
                   <Image
-                    src="/images/zap-zap-avatar.png"
-                    alt="Zap-Zap Professor"
+                    src="/photos/bichitro.png"
+                    alt="Professor Bhichitro"
                     width={56}
                     height={56}
-                    className="object-cover w-full h-full"
+                    className="object-contain w-full h-full p-0.5"
                   />
                 </div>
                 <div>
@@ -157,7 +157,7 @@ export default function Footer() {
                 <CheckCircle2 size={44} className="text-emerald-500 mb-3" />
                 <h5 className="font-heading text-xl font-bold text-slate-900 mb-1">Message Received!</h5>
                 <p className="text-sm text-slate-600 mb-4 max-w-md">
-                  {successInfo || "Zap-Zap and AURA-7 will review your transmission and get back to you shortly."}
+                  {successInfo || "Professor Bhichitro and the team will review your transmission and get back to you shortly."}
                 </p>
                 <button
                   onClick={() => setIsSubmitted(false)}

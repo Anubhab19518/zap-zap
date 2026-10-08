@@ -30,8 +30,8 @@ const STORY_STAGES: EpisodeStage[] = [
     title: "THE DISCOVERY",
     headline: "An Impossible Signal Over Kolkata",
     description:
-      "Every grand episode begins with a mystery! When glowing cosmic frequencies are detected high above the historic monuments of Kolkata, Zap-Zap and his AI assistant AURA-7 jump into action.",
-    funFact: "Zap-Zap's pet cat always spots the clues first!",
+      "Every grand episode begins with a mystery! When glowing cosmic frequencies are detected high above the historic monuments of Kolkata, Professor Bhichitro, Miki the cat, Abhisek, and Mallika jump into action.",
+    funFact: "Miki the cat always spots the clues first!",
     imageSrc: "/images/zap_hero_lab.jpg",
     themeGradient: "from-amber-400 to-orange-500",
     pillColor: "bg-amber-100 text-amber-900 border-amber-300",
@@ -54,7 +54,7 @@ const STORY_STAGES: EpisodeStage[] = [
     title: "THE INVESTIGATION",
     headline: "Quantum Simulations & Team Science",
     description:
-      "Instead of brute force, Zap-Zap heads to his quantum laboratory. Surrounded by holographic simulations and alongside his young apprentices, he tests physics formulas to find the weak spot.",
+      "Instead of brute force, the team heads to the quantum laboratory. Surrounded by holographic simulations and alongside Abhisek, Mallika, and Miki, Professor Bhichitro tests physics formulas to find the weak spot.",
     funFact: "Science is all about asking the right questions!",
     imageSrc: "/images/lab_team_allies.jpg",
     themeGradient: "from-cyan-400 to-blue-600",
