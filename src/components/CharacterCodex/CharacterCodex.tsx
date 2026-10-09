@@ -32,8 +32,8 @@ const CHARACTERS: FranchiseCharacter[] = [
     role: "Chief Scientist & Master Inventor",
     tags: ["#GeniusScientist", "#MasterInventor", "#ScienceSuperpower", "#ProtectorOfBengal"],
     quote: "Think. Experiment. Discover. Innovate! Science is the greatest superpower we have to protect Bengal and shape the future.",
-    imageSrc: "/photos/bichitro.png",
-    zoomScale: "scale-115 sm:scale-200",
+    imageSrc: "/photos/Artboard-1-Photoroom.png",
+    zoomScale: "scale-125 sm:scale-120",
     theme: {
       heroBg: "bg-gradient-to-br from-amber-400 via-orange-500 to-amber-600",
       border: "border-amber-300/80",
@@ -49,8 +49,8 @@ const CHARACTERS: FranchiseCharacter[] = [
     role: "Intelligent Cat & Lab Detective",
     tags: ["#SmartCat", "#LoyalCompanion", "#LabDetective", "#FelineGenius"],
     quote: "Meow! Always the quickest to spot hidden clues, alert the crew, and protect the lab before anyone else notices.",
-    imageSrc: "/photos/cat.png",
-    zoomScale: "scale-120 sm:scale-105",
+    imageSrc: "/photos/Artboard-3-Photoroom.png",
+    zoomScale: "scale-125 sm:scale-120",
     theme: {
       heroBg: "bg-gradient-to-br from-emerald-400 via-teal-500 to-emerald-700",
       border: "border-emerald-300/80",
@@ -66,8 +66,8 @@ const CHARACTERS: FranchiseCharacter[] = [
     role: "Daring Young Inventor & Explorer",
     tags: ["#YoungInventor", "#DaringExplorer", "#STEMHero", "#TechEnthusiast"],
     quote: "Ready for action! There's no scientific mystery too challenging or mission too tough when we work together.",
-    imageSrc: "/photos/abhisekh.png",
-    zoomScale: "scale-150 sm:scale-140",
+    imageSrc: "/photos/Artboard-2-Photoroom.png",
+    zoomScale: "scale-125 sm:scale-120",
     theme: {
       heroBg: "bg-gradient-to-br from-sky-400 via-blue-600 to-indigo-700",
       border: "border-sky-300/80",
@@ -83,8 +83,8 @@ const CHARACTERS: FranchiseCharacter[] = [
     role: "Brilliant Tech Strategist & Innovator",
     tags: ["#BrilliantMind", "#QuantumStrategist", "#CreativeGenius", "#FearlessExplorer"],
     quote: "Every complex problem has an elegant solution — all it takes is curiosity, keen observation, and precise science!",
-    imageSrc: "/photos/mallika.png",
-    zoomScale: "scale-115 sm:scale-100",
+    imageSrc: "/photos/Artboard-4-Photoroom.png",
+    zoomScale: "scale-125 sm:scale-120",
     theme: {
       heroBg: "bg-gradient-to-br from-fuchsia-400 via-pink-500 to-rose-600",
       border: "border-pink-300/80",

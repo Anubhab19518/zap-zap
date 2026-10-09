@@ -65,11 +65,11 @@ export default function Footer() {
               <div className="flex items-center gap-3.5 mb-6">
                 <div className="w-14 h-14 rounded-full bg-amber-400 p-0.5 shadow-md overflow-hidden border-2 border-amber-300 flex items-center justify-center">
                   <Image
-                    src="/photos/bichitro.png"
+                    src="/photos/Artboard-1.png"
                     alt="Professor Bhichitro"
                     width={56}
                     height={56}
-                    className="object-contain w-full h-full p-0.5"
+                    className="object-contain w-full h-full p-0.5 scale-110"
                   />
                 </div>
                 <div>
